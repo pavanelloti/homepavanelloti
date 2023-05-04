@@ -6,6 +6,12 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit2b14168f54bda1663920cbe0a7812380
 {
+    public static $files = array (
+        '3d9370874a8313966156b6c36cb209b6' => __DIR__ . '/../..' . '/source/Boot/Config.php',
+        '1f721232bf29869f0e329cfbadab3e53' => __DIR__ . '/../..' . '/source/Boot/Helpers.php',
+        '81c8512c04d5ad754e210460a19dc2b6' => __DIR__ . '/../..' . '/source/Boot/Minify.php',
+    );
+
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (

@@ -1,46 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-
-  <title>PavanelloTI</title>
+  <?= $head; ?>
 
   <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
-
-
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
   <!-- font wesome stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
+  <link rel="stylesheet" type="text/css" href="<?= theme("/assets/css/bootstrap.css"); ?>" />
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="<?= theme("/assets/css/style.css"); ?>" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="<?= theme("/assets/css/responsive.css"); ?>" rel="stylesheet" />
 </head>
 
-<body class="sub_page">
+<body>
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand mr-5" href="index.html">
-            <img src="images/logopavanello.png" title="PavanelloTI" alt="PavanelloTI">
+            <img src="<?= theme("/assets/images/logopavanello.png"); ?>" title="PavanelloTI" alt="PavanelloTI">
             <span>
              Pavanello TI
             </span>
@@ -51,18 +40,18 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-              <ul class="navbar-nav  ">
+              <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?= url("/"); ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html"> Sobre </a>
+                  <a class="nav-link" href="/pavanelloti/sobre"> Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="service.html"> Serviços </a>
+                  <a class="nav-link" href="<?= url("/sobre"); ?>"> Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contatos</a>
+                  <a class="nav-link" href="contact">Contatos</a>
                 </li>
               </ul>
               
@@ -72,38 +61,19 @@
       </div>
     </header>
     <!-- end header section -->
+    
+    
+      <?= $this->section("content"); ?>
+    
+
+    <!-- contact section -->
+
+    
+
+    <!-- end contact section -->
+
+
   </div>
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Sobre nós
-              </h2>
-            </div>
-            <p>
-              Há mais de 15 anos no mercado, temos utilizado nossa vasta experiência e conhecimento em Tecnologia da Informação 
-              para oferecer consultoria personalizada que atende às necessidades específicas de nossos clientes, ajudando-os a 
-              alcançar seus objetivos de negócios com sucesso.
-            </p>
-            
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end about section -->
-
   <!-- info section -->
 
   <section class="info_section layout_padding">
@@ -115,16 +85,16 @@
       </div>
       <div class="box">
         <a href="" class="img-box">
-          <img src="images/location.png" alt="" class="img-1">
-          <img src="images/location-o.png" alt="" class="img-2">
+          <img src="<?= theme("/assets/images/location.png"); ?>" alt="" class="img-1">
+          <img src="<?= theme("/assets/images/location-o.png"); ?>" alt="" class="img-2">
         </a>
         <a href="" class="img-box">
-          <img src="images/call.png" alt="" class="img-1">
-          <img src="images/call-o.png" alt="" class="img-2">
+          <img src="<?= theme("/assets/images/call.png"); ?>" alt="" class="img-1">
+          <img src="<?= theme("/assets/images/call-o.png"); ?>" alt="" class="img-2">
         </a>
         <a href="" class="img-box">
-          <img src="images/envelope.png" alt="" class="img-1">
-          <img src="images/envelope-o.png" alt="" class="img-2">
+          <img src="<?= theme("/assets/images/envelope.png"); ?>" alt="" class="img-1">
+          <img src="<?= theme("/assets/images/envelope-o.png"); ?>" alt="" class="img-2">
         </a>
       </div>
     </div>

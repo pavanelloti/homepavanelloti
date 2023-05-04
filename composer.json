@@ -16,7 +16,12 @@
   "autoload": {
     "psr-4": {
       "Source\\": "source/"
-    }
+    },
+    "files": [
+      "source/Boot/Config.php",
+      "source/Boot/Helpers.php",
+      "source/Boot/Minify.php"
+    ]
   },
   "require": {
     "phpmailer/phpmailer": "~6.0",
