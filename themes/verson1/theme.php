@@ -12,14 +12,9 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
   <!-- font wesome stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="<?= theme("/assets/css/bootstrap.css"); ?>" />
   <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="<?= theme("/assets/css/style.css"); ?>" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="<?= theme("/assets/css/responsive.css"); ?>" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap">
+  <link rel="stylesheet" href="<?= theme("/assets/style.css"); ?>"/>
 </head>
 
 <body>
@@ -28,7 +23,7 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand mr-5" href="index.html">
+          <a class="navbar-brand mr-5" href="<?= url("/"); ?>">
             <img src="<?= theme("/assets/images/logopavanello.png"); ?>" title="PavanelloTI" alt="PavanelloTI">
             <span>
              Pavanello TI
@@ -45,13 +40,13 @@
                   <a class="nav-link" href="<?= url("/"); ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/pavanelloti/sobre"> Sobre </a>
+                  <a class="nav-link" href="<?= url("/sobre"); ?>"> Sobre </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="<?= url("/sobre"); ?>"> Serviços </a>
+                  <a class="nav-link" href="<?= url("/servico"); ?>"> Serviços </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact">Contatos</a>
+                  <a class="nav-link" href="<?= url("/contato"); ?>">Contatos</a>
                 </li>
               </ul>
               
@@ -66,17 +61,7 @@
       <?= $this->section("content"); ?>
     
 
-    <!-- contact section -->
-
-    
-
-    <!-- end contact section -->
-
-
-  </div>
-  <!-- info section -->
-
-  <section class="info_section layout_padding">
+  <section class="info_section layout_padding" style="background-color: #ffffff;">
     <div class="footer_contact">
       <div class="heading_container">
         <h2>
@@ -114,8 +99,8 @@
   </section>
   <!-- footer section -->
 
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="<?= theme("/assets/script.js"); ?>"></script>
+  <?= $this->section("scripts"); ?>
 
 </body>
 

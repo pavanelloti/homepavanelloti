@@ -2,7 +2,7 @@
 
 use MatthiasMullie\Minify;
 
-if(strpos(url(), "localhost")){  //STRPOS - (se dentro da 'variavel/func', existe a palavra "localhost")->:bool
+if(strpos(url(), "10.0.0.105")){  //STRPOS - (se dentro da 'variavel/func', existe a palavra "localhost")->:bool
     
     ###########
     /** CSS **/
@@ -33,6 +33,7 @@ if(strpos(url(), "localhost")){  //STRPOS - (se dentro da 'variavel/func', exist
 
     $minJS = new Minify\JS();
     $minJS->add(__DIR__ . "/../../shared/scripts/jquery.min.js");
+    $minJS->add(__DIR__ . "/../../shared/scripts/jquery.form.js");
     $minJS->add(__DIR__ . "/../../shared/scripts/jquery-ui.js");
 
     // Theme JS

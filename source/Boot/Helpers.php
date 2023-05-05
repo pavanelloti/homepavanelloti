@@ -1,5 +1,7 @@
 <?php
 
+use Source\Core\Session;
+
 /**
  * ####################
  * ###   VALIDATE   ###
@@ -296,4 +298,13 @@ function csrf_verify($request): bool
         return false;
     }
     return true;
+}
+
+function flash(): ?string
+{
+    $session = new Session();
+    if ($flash = $session->flash()){
+        echo $flash;
+    }
+    return null;
 }

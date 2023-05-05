@@ -23,7 +23,7 @@
                         Oferecemos serviços de consultoria abrangentes, desde o desenvolvimento de sistemas até a infraestrutura de redes, para atender às diversas demandas de nossos clientes.
                       </p>
                       <div class="btn-box">
-                        <a href="contact.html" class="btn-1">
+                        <a href="<?= url("/contato"); ?>" class="btn-1">
                           Contatos
                         </a>
                       </div>

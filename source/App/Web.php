@@ -2,6 +2,7 @@
 
 namespace Source\App;
 
+use Source\Support\Email;
 use Source\Core\Controller;
 
 class Web extends Controller
@@ -40,6 +41,40 @@ class Web extends Controller
        
     }
 
+    public function service(): void
+    {
+        
+        $head = $this->seo->render(CONF_SITE_NAME . " - " . CONF_SITE_TITLE, CONF_SITE_DESC, url("/sobre"), theme("/assets/images/share.jpg"));
+
+        echo $this->view->render("service", [
+            "head"=>"$head"
+        ]);
+       
+    }
+    public function contact(?array $data): void
+    {
+
+        if(!empty($data)){
+
+            (new Email())->bootstrap(
+                "Contato Domínio " . CONF_SITE_NAME,
+                "Contato: {$data['nome']} - Email: {$data['email']}" . "<br>" . $data['desc'],
+                "pavanelloti@gmail.com",
+                "{$data['nome']} {$data['email']}"
+            )->send();
+
+var_dump($data);
+          
+
+        }
+        
+        $head = $this->seo->render(CONF_SITE_NAME . " - " . CONF_SITE_TITLE, CONF_SITE_DESC, url("/sobre"), theme("/assets/images/share.jpg"));
+
+        echo $this->view->render("contact", [
+            "head"=>"$head"
+        ]);
+       
+    }
 
 
     ########################
